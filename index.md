@@ -5,10 +5,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="https://injahow.github.io/assets/css/main.css" />
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<noscript><link rel="stylesheet" href="https://injahow.github.io/https://injahow.github.io/assets/css/noscript.css" /></noscript>
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body class="is-loading">
@@ -27,7 +27,7 @@ left:0px;
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar">![](./images/avatar.jpg)</span>
+							<span class="avatar">![](https://injahow.github.io/images/avatar.jpg)</span>
 # injahow
 没什么有趣的东西,有趣的是来这的你!
 						</header>
