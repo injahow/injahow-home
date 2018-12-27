@@ -1,48 +1,37 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>INJAHOW HOME</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-                 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	</head>
-	<body class="is-loading">
+<head>
+<title>INJAHOW HOME</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="assets/css/main.css" />
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="is-loading">
 <style>
-
 canvas {
     padding:0;
     margin:0;
 position: absolute;
     z-index: -1;
 left:0px;
-
 }
-
 </style>
 　　　　<canvas id="sakura"></canvas>
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<section id="main">
-
 						<header>
 							<span class="avatar">![](./images/avatar.jpg)</span>
-
 # injahow
-
 没什么有趣的东西,有趣的是来这的你!
-
 						</header>
-
 						<footer>
-
 *   [Blog](http://injahow.com/index.html)
 *   [Github](https://github.com/injahow)
 *   [Twitter](https://twitter.com/injahow)
@@ -50,10 +39,8 @@ left:0px;
 							<input type="button" value="music" onclick="control()">
 						</footer>
 					</section>
-
 				<!-- Footer -->
 					<footer id="footer">
-
 *   &copy; [injahow](http://injahow.com/index.html)
 *   Blog since 2018
 					</footer>
@@ -90,38 +77,31 @@ uniform vec3 uResolution;
 uniform vec3 uOffset;
 uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
 uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
-
 attribute vec3 aPosition;
 attribute vec3 aEuler;
 attribute vec2 aMisc; //x:size, y:fade
-
 varying vec3 pposition;
 varying float psize;
 varying float palpha;
 varying float pdist;
-
 //varying mat3 rotMat;
 varying vec3 normX;
 varying vec3 normY;
 varying vec3 normZ;
 varying vec3 normal;
-
 varying float diffuse;
 varying float specular;
 varying float rstop;
 varying float distancefade;
-
 void main(void) {
     // Projection is based on vertical angle
     vec4 pos = uModelview * vec4(aPosition + uOffset, 1.0);
     gl_Position = uProjection * pos;
     gl_PointSize = aMisc.x * uProjection[1][1] / -pos.z * uResolution.y * 0.5;
-
     pposition = pos.xyz;
     psize = aMisc.x;
     pdist = length(pos.xyz);
     palpha = smoothstep(0.0, 1.0, (pdist - 0.1) / uFade.z);
-
     vec3 elrsn = sin(aEuler);
     vec3 elrcs = cos(aEuler);
     mat3 rotx = mat3(
@@ -141,7 +121,6 @@ void main(void) {
     );
     mat3 rotmat = rotx * roty * rotz;
     normal = rotmat[2];
-
     mat3 trrotm = mat3(
         rotmat[0][0], rotmat[1][0], rotmat[2][0],
         rotmat[0][1], rotmat[1][1], rotmat[2][1],
@@ -150,9 +129,7 @@ void main(void) {
     normX = trrotm[0];
     normY = trrotm[1];
     normZ = trrotm[2];
-
     const vec3 lit = vec3(0.6917144638660746, 0.6917144638660746, -0.20751433915982237);
-
     float tmpdfs = dot(lit, normal);
     if(tmpdfs < 0.0) {
         normal = -normal;
@@ -168,7 +145,6 @@ void main(void) {
     else {
         specular = 0.0;
     }
-
     rstop = clamp((abs(pdist - uDOF.x) - uDOF.y) / uDOF.z, 0.0, 1.0);
     rstop = pow(rstop, 0.5);
     //-0.69315 = ln(0.5)
