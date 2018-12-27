@@ -27,7 +27,7 @@ left:0px;
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar">![](https://injahow.github.io/images/avatar.jpg)</span>
+							<span class="avatar">[](https://injahow.github.io/images/avatar.jpg)</span>
 # injahow
 没什么有趣的东西,有趣的是来这的你!
 						</header>
