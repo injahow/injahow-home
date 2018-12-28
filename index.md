@@ -1,76 +1,63 @@
-<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>INJAHOW HOME</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-                 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	</head>
-	<body class="is-loading">
+<head>
+<title>INJAHOW HOME</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="assets/css/main.css" />
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="is-loading">
 <style>
-
 canvas {
     padding:0;
     margin:0;
 position: absolute;
     z-index: -1;
 left:0px;
-
 }
-
 </style>
-　　　　<canvas id="sakura"></canvas>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main">
-
-						<header>
-							<span class="avatar"><img src="./images/avatar.jpg" height="110px" width="110px"/></span>
-							<h1>injahow</h1>
-							<p>没什么有趣的东西,有趣的是来这的你!</p>
-						</header>
-
-						<footer>
-							<ul class="icons">
-								<li><a href="http://injahow.com" class="fa-home">Blog</a></li>
-								<li><a href="https://github.com/injahow" class="fa-github">Github</a></li>
-								<li><a href="https://twitter.com/injahow" class="fa-twitter">Twitter</a></li>
-								<li><a href="https://t.me/injahow" class="fa-telegram">Telegram</a></li>
-
-
-							</ul>
-							<input type="button" value="music" onclick="control()">
-						</footer>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; <a href="http://injahow.com/index.html">injahow</a></li><li>Blog since 2018 </li>
-						</ul>
-					</footer>
-					<audio id="music" >
-						<source src="https://music.163.com/song/media/outer/url?id=591321.mp3" type="audio/mpeg">
-					</audio>
-
-			</div>
-
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
+<canvas id="sakura"></canvas>
+<!-- Wrapper -->
+<div id="wrapper">
+<!-- Main -->
+<section id="main">
+<header>
+<span class="avatar"><img src="./images/avatar.jpg" height="110px" width="110px"/></span>
+<h1>injahow</h1>
+<p>没什么有趣的东西,有趣的是来这的你!</p>
+</header>
+<footer>
+<ul class="icons">
+<li><a href="http://injahow.com" class="fa-home">Blog</a></li>
+<li><a href="https://github.com/injahow" class="fa-github">Github</a></li>
+<li><a href="https://twitter.com/injahow" class="fa-twitter">Twitter</a></li>
+<li><a href="https://t.me/injahow" class="fa-telegram">Telegram</a></li>
+</ul>
+<input type="button" value="music" onclick="control()">
+</footer>
+</section>
+<!-- Footer -->
+<footer id="footer">
+<ul class="copyright">
+<li>&copy; <a href="http://injahow.com/index.html">injahow</a></li><li>Blog since 2018 </li>
+</ul>
+</footer>
+<audio id="music" >
+<source src="https://music.163.com/song/media/outer/url?id=591321.mp3" type="audio/mpeg">
+</audio>
+</div>
+<!-- Scripts -->
+<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+<script>
+if ('addEventListener' in window) {
+window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+}
+</script>
 			<script>
 				function control(){
 					var audio = document.getElementById('music');
