@@ -13,10 +13,10 @@
 <body class="is-loading">
 <style>
 canvas {
-    padding:0;
-    margin:0;
+padding:0;
+margin:0;
 position: absolute;
-    z-index: -1;
+z-index: -1;
 left:0px;
 }
 </style>
@@ -58,18 +58,18 @@ window.addEventListener('load', function() { document.body.className = document.
 document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 }
 </script>
-			<script>
-				function control(){
-					var audio = document.getElementById('music');
-					if(audio!==null){
-						if(audio.paused){
-						audio.play();//播放controls autoplay loop
-						}else{
-						audio.pause();//暂停
-						}
-						}
-					}
-			</script>
+<script>
+function control(){
+var audio = document.getElementById('music');
+if(audio!==null){
+if(audio.paused){
+audio.play();//播放controls autoplay loop
+}else{
+audio.pause();//暂停
+}
+}
+}
+</script>
 <script id="sakura_point_vsh" type="x-shader/x_vertex">
 uniform mat4 uProjection;
 uniform mat4 uModelview;
