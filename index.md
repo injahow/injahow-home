@@ -151,6 +151,7 @@ rstop = pow(rstop, 0.5);
 distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
 }
 </script>
+ 
 <script id="sakura_point_fsh" type="x-shader/x_fragment">
 #ifdef GL_ES
 //precision mediump float;
